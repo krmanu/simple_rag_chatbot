@@ -1,0 +1,1 @@
+ Machine Learning is a technique that allows computers to learn from data and make decisions without explicit programming. It works by identifying patterns in data and using them to make predictions. It is used in areas such as: Image Recognition, Speech Processing, Language Translation, Recommender Systems 

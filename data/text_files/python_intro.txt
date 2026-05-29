@@ -1,0 +1,5 @@
+ Python is a high-level programming language known for its simple and readable syntax. It has the following features: Allows writing programs with fewer lines of code, improving readability.
+Automatically detects variable types at runtime, eliminating the need for explicit declarations.
+Used in web development, data analysis, automation and many other fields.
+Supports object-oriented, functional and procedural programming styles.
+Dynamically typed and has automatic garbage collection.
