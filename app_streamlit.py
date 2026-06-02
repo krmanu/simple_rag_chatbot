@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from utlis.chunking import load_and_chunk
 from utlis.embedding_vectorstore import create_vectorstore
 from utlis.retriever import load_retriever
+from utlis.guardrail import input_guardrail, output_guardrail
 
 from langchain_groq import ChatGroq
 
@@ -72,6 +73,11 @@ retriever = setup_rag()
 
 def rag_chat(query):
 
+    is_valid, error = input_guardrail(query)
+    if not is_valid:
+        st.error(error)
+        return
+
     docs = retriever.invoke(query)
 
     sources = []
@@ -93,8 +99,10 @@ def rag_chat(query):
     """
 
     response = llm.invoke(prompt)
-
-    return response.content, sources
+    final_response = output_guardrail(
+        response.content
+    )
+    return final_response, sources
 
 user_input = st.text_input("Ask your question")
 
