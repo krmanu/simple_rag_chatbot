@@ -12,6 +12,7 @@ dependencies = [
     "langchain-groq>=1.1.2",
     "langchain-huggingface>=1.2.2",
     "pypdf>=6.12.2",
+    "pytest>=9.0.3",
     "sentence-transformers>=5.5.1",
     "streamlit>=1.57.0",
 ]

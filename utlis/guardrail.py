@@ -13,14 +13,18 @@ PROMPT_INJECTION_PATTERNS = [
 
 # Restricted Topics
 BLOCKED_TOPICS = [
+    "hack",
+    "hacking",
     "malware",
     "phishing",
     "ransomware",
     "password cracking",
     "credit card fraud",
+    "sql injection",
+    "xss attack",
     "ddos attack",
-    "social engineering",
-    "exploit vulnerability"
+    "website attack",
+    "bypass authentication"
 ]
 
 def input_guardrail(query):
